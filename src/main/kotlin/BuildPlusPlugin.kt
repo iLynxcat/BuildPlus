@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin
 public class BuildPlusPlugin : JavaPlugin() {
     private var version: String? = null
 
-    val eventListener = EventListener(this)
+    internal val eventListener = EventListener(this)
 
     override fun onEnable() {
         super.onEnable()
