@@ -1,0 +1,22 @@
+name: Version Release
+
+on:
+  push:
+    tags: [ 'v*.*.*' ]
+
+jobs:
+  build:
+    name: Build and release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v3
+      - name: Build with Gradle
+        run: ./gradlew build
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          files: build/libs/*.jar

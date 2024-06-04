@@ -1,0 +1,12 @@
+name: BuildPlus
+description: Provides useful utilities for building in survival mode.
+version: "@VERSION@"
+author: iLynxcat
+api-version: "1.20"
+
+main: me.ilynxcat.mc.buildplus.BuildPlusPlugin
+load: STARTUP
+libraries:
+  - "org.jetbrains.kotlin:kotlin-stdlib:@KOTLIN_VERSION@"
+prefix: BuildPlus
+website: https://github.com/iLynxcat/mc-build-plus
