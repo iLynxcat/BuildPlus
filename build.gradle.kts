@@ -22,7 +22,10 @@ tasks {
             duplicatesStrategy = DuplicatesStrategy.INCLUDE
 
             include("**/*.yml")
-            filter<ReplaceTokens>("tokens" to mapOf("VERSION" to project.version, "KOTLIN_VERSION" to kotlinVersion))
+            filter<ReplaceTokens>("tokens" to mapOf(
+                "VERSION" to project.version,
+                "KOTLIN_VERSION" to kotlinVersion
+            ))
         }
     }
 }
@@ -37,11 +40,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:$minecraftVersion-R0.1-SNAPSHOT")
-
     implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation("dev.kord:kord-core:0.13.1")
+    compileOnly("io.papermc.paper:paper-api:$minecraftVersion-R0.1-SNAPSHOT")
 }
 
 kotlin { jvmToolchain(21) }

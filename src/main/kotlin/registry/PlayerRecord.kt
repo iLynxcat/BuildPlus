@@ -5,6 +5,7 @@ import org.bukkit.entity.Player
 class PlayerRecord(player: Player) {
     var isFlightEnabled = true
     var isInstantBreakEnabled = false
+    var isBubbleBarOverrunEnabled = true
     
-    var isFallingFromFlight = false
+    var flightSafetyCountdownSeconds: Int? = null
 }
