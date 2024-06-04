@@ -12,7 +12,7 @@ val kotlinVersion = "1.9.24"
 val minecraftVersion = "1.20.4"
 
 group = "me.ilynxcat.mc.build-plus"
-version = "0.0.1-alpha.02"
+version = "0.0.1-alpha.03"
 
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(21)) }
 
