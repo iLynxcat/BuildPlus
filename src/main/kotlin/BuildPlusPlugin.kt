@@ -1,12 +1,14 @@
 package me.ilynxcat.mc.buildplus
 
 import me.ilynxcat.mc.buildplus.event.EventListener
+import me.ilynxcat.mc.buildplus.registry.PlayerRegistry
 import org.bukkit.plugin.java.JavaPlugin
 
 class BuildPlusPlugin : JavaPlugin() {
     private var version: String? = null
 
     internal val eventListener = EventListener(this)
+    internal val playerRegistry = PlayerRegistry(this)
 
     override fun onEnable() {
         super.onEnable()
