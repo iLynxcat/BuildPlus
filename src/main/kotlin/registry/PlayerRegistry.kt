@@ -9,7 +9,7 @@ class PlayerRegistry(private val plugin: BuildPlusPlugin) {
     private val dataStore = mutableMapOf<UUID, PlayerRecord>()
 
     init {
-        plugin.logger.info("Initializing player registry #awesomeness!")
+        plugin.logger.info("Initializing player registry.")
     }
     
     fun getPlayer(player: Player): PlayerRecord {
