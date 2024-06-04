@@ -3,7 +3,7 @@ package me.ilynxcat.mc.buildplus
 import me.ilynxcat.mc.buildplus.event.EventListener
 import org.bukkit.plugin.java.JavaPlugin
 
-public class BuildPlusPlugin : JavaPlugin() {
+class BuildPlusPlugin : JavaPlugin() {
     private var version: String? = null
 
     internal val eventListener = EventListener(this)
