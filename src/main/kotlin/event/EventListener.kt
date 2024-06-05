@@ -5,11 +5,13 @@ import me.ilynxcat.mc.buildplus.experience.ExperienceActionType
 import me.ilynxcat.mc.buildplus.experience.NotEnoughExperienceError
 import me.ilynxcat.mc.buildplus.experience.canAffordAction
 import me.ilynxcat.mc.buildplus.experience.deductExpForAction
-import me.ilynxcat.mc.buildplus.utils.*
+import me.ilynxcat.mc.buildplus.utils.getDistanceToHighestBlock
+import me.ilynxcat.mc.buildplus.utils.getHighestBlockLocation
+import me.ilynxcat.mc.buildplus.utils.isFlyingInSurvival
+import me.ilynxcat.mc.buildplus.utils.isInSurvivalish
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
 import net.kyori.adventure.util.TriState
-import org.bukkit.GameMode
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerExpChangeEvent
@@ -18,7 +20,7 @@ import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.event.player.PlayerToggleFlightEvent
 import java.text.DecimalFormat
 
-class EventListener(private val plugin: BuildPlusPlugin) : Listener {
+class EventListener(plugin: BuildPlusPlugin) : Listener {
     private val registry = plugin.playerRegistry
 
     @EventHandler
